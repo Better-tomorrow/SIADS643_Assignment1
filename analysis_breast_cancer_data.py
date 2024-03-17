@@ -7,6 +7,15 @@ from k_nearest_neighbors import k_nearest_neighbors
 from generate_accuracy_plot import accuracy_plot
 
 def analysis_breast_cancer_data() -> None:
+    """
+    Analyze Wisconsin breast cancer dataset. Run a K nearest neighbor classifier. Test the accuracy
+    of classification model. Plot the prediction accuracy.
+    
+    Args:
+        None
+    Returns:
+        None
+    """
     #Define a random state as value 42 to get the reproducable results
     random_state = 42
     preds = None
@@ -30,7 +39,7 @@ def analysis_breast_cancer_data() -> None:
     print("Predicted values on test split :",preds)
     print("Actual test split target values:",y_test.to_numpy())
     print("Score: ", score)
-    # Accuracy plot
+    # Generate accuracy plot
     accuracy_plot(knn_classifier,X_train,X_test,y_train,y_test)
 
 if __name__ == '__main__':
