@@ -26,7 +26,14 @@ To run the script, navigate to the project directory and run the following comma
 python analysis_breast_cancer_data.py
 
 ## Description of the files
-
+analysis_breast_cancer_data.py -> Contains main analysis of the data. All functions are referred here.
+load_breast_cancer_data.py -> Has make_cancer_dataframe() function which loads the scikit-learn breast cancer data into a pandas dataframe.
+feature_count.py -> feature_count() function retruns the number of features used for classification prediction task
+get_distibution.py -> get_target_distro() function returns a histogram of two target values 'malignant' or 'benign' in cancer dataset
+prepare_X_y.py -> prepare_X_y() function prepares feature dataframe and target seires
+train_test_split.py -> get_train_test() function splits the data into training and test sets
+k_nearest_neighbors.py -> k_nearest_neighbors() trains a KNN model using training data
+generate_accuracy_plot.py -> accuracy_plot() plots the prediction accuracy ay each classification level
 
 ## Authors
 Deepak V Prabhu
