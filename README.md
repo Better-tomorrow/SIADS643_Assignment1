@@ -8,7 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You need to have Python installed on your machine. This project uses the following Python libraries:
+Clone the github repository https://github.com/Better-tomorrow/SIADS643_Assignment1.git
+You need to have Python installed on your machine. 
+This project uses the following Python libraries:
 
 - numpy
 - pandas
