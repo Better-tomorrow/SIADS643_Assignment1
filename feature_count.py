@@ -1,3 +1,4 @@
+"""Module containing feature count function"""
 import pandas as pd
 
 def feature_count(cancer: pd.DataFrame) -> int:

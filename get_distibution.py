@@ -1,3 +1,4 @@
+"""Module containing function for generating histogram"""
 import numpy as np
 import pandas as pd
 
@@ -13,8 +14,8 @@ def get_target_distro(cancer: pd.DataFrame) -> pd.Series:
     """
     distro = None
 
-    # generate hisogram out of 'target' column. The type of tumor can be 'maligant' or 'benign'.
-    hist,bins = np.histogram(cancer["target"],bins=np.linspace(0,1,3))
+    # generate histogram out of 'target' column. The type of tumor can be 'maligant' or 'benign'.
+    hist, _ = np.histogram(cancer["target"],bins=np.linspace(0,1,3))
     distro = pd.Series(hist,index=['malignant', 'benign'])
-    
+
     return distro

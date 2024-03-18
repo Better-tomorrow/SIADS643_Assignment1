@@ -1,16 +1,19 @@
+"""Module containing accuracy plot generating function"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-def accuracy_plot(knn, X_train:pd.DataFrame, X_test:pd.DataFrame, y_train:pd.Series, y_test:pd.Series) -> None:
+def accuracy_plot(knn, x_train:pd.DataFrame, x_test:pd.DataFrame,
+                  y_train:pd.Series, y_test:pd.Series) -> None:
     """
-    Create a accuracy plot of the K nearest neighbors classifier by target value (i.e. malignant, benign).
+    Create a accuracy plot of the K nearest neighbors classifier by target value
+    (i.e. malignant, benign).
     
     Args:
         knn (knn Classifier) : Trained K nearest neighbors calssifier
-        X_train (pd.DataFrame): training feature data
+        x_train (pd.DataFrame): training feature data
         y_train (pd.Series): training target
-        X_test (pd.DataFrame): testing feature data
+        x_test (pd.DataFrame): testing feature data
         y_test (pd.Series): testing target
  
     Returns:
@@ -18,21 +21,21 @@ def accuracy_plot(knn, X_train:pd.DataFrame, X_test:pd.DataFrame, y_train:pd.Ser
     """
 
     # Find the training and testing accuracies by target value (i.e. malignant, benign)
-    mal_train_X = X_train[y_train == 0]
+    mal_train_x = x_train[y_train == 0]
     mal_train_y = y_train[y_train == 0]
-    ben_train_X = X_train[y_train == 1]
+    ben_train_x = x_train[y_train == 1]
     ben_train_y = y_train[y_train == 1]
 
-    mal_test_X = X_test[y_test == 0]
+    mal_test_x = x_test[y_test == 0]
     mal_test_y = y_test[y_test == 0]
-    ben_test_X = X_test[y_test == 1]
+    ben_test_x = x_test[y_test == 1]
     ben_test_y = y_test[y_test == 1]
 
     scores = [
-        knn.score(mal_train_X, mal_train_y),
-        knn.score(ben_train_X, ben_train_y),
-        knn.score(mal_test_X, mal_test_y),
-        knn.score(ben_test_X, ben_test_y),
+        knn.score(mal_train_x, mal_train_y),
+        knn.score(ben_train_x, ben_train_y),
+        knn.score(mal_test_x, mal_test_y),
+        knn.score(ben_test_x, ben_test_y),
     ]
 
     plt.figure(figsize=(8, 6))

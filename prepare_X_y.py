@@ -1,6 +1,7 @@
+"""Module containing function for preparing feature set and target list"""
 import pandas as pd
 
-def prepare_X_y(cancer: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
+def prepare_x_y(cancer: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
     """
     Generate features data and predicted target (type of tumor - Malignant or bening) .
     
@@ -11,11 +12,10 @@ def prepare_X_y(cancer: pd.DataFrame) -> tuple[pd.DataFrame, pd.Series]:
         X (pd.DataFrame): features data
         y (pd.Series): target
     """
-    
-    X, y = None, None
+    x, y = None, None
 
     # Split the dataframe into feature data and target
-    X = cancer.drop(labels="target", axis=1)
+    x = cancer.drop(labels="target", axis=1)
     y = cancer["target"]
-    
-    return X, y
+
+    return x, y

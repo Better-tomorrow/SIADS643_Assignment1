@@ -2,7 +2,7 @@
 from load_breast_cancer_data import make_cancer_dataframe
 from feature_count import feature_count
 from get_distibution import get_target_distro
-from prepare_X_y import prepare_X_y
+from prepare_X_y import prepare_x_y
 from train_test_split import get_train_test
 from k_nearest_neighbors import k_nearest_neighbors
 from generate_accuracy_plot import accuracy_plot
@@ -25,7 +25,7 @@ def analysis_breast_cancer_data() -> None:
     # load the breast cancer data from scikit-learn into a dataframe
     cancer_df = make_cancer_dataframe()
     # Prepare feature dataframe and predictor varaible list
-    x , y = prepare_X_y(cancer_df)
+    x , y = prepare_x_y(cancer_df)
     # Split the data into training and testing sets
     x_train, x_test, y_train, y_test = get_train_test(x, y, random_state)
     # Generate a trained k nearest neighbor classifier

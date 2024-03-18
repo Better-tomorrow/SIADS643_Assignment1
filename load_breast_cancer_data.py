@@ -1,3 +1,4 @@
+"""Module containing function for loading data to dataframe"""
 import pandas as pd
 from sklearn.datasets import load_breast_cancer
 
@@ -17,7 +18,7 @@ def make_cancer_dataframe() -> pd.DataFrame:
     # Load the breast_cancer dataset from scikit-learn.
     cancer = load_breast_cancer()
     cancer_df = None
-    # Create the breast cancer dataframe 
+    # Create the breast cancer dataframe
     cancer_df = pd.DataFrame(cancer["data"], columns=cancer["feature_names"])
     # Add a target column at the end of dataframe
     cancer_df.insert(len(cancer_df.columns), "target", cancer["target"])
