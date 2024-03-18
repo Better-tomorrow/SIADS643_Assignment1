@@ -32,7 +32,7 @@ python analysis_breast_cancer_data.py
  - load_breast_cancer_data.py -> Has make_cancer_dataframe() function which loads the scikit-learn breast cancer data into a pandas dataframe.
  - feature_count.py -> feature_count() function retruns the number of features used for classification prediction task
  - get_distibution.py -> get_target_distro() function returns a histogram of two target values 'malignant' or 'benign' in cancer dataset
- - prepare_X_y.py -> prepare_X_y() function prepares feature dataframe and target seires
+ - prepare_x_y.py -> prepare_x_y() function prepares feature dataframe and target seires
  - train_test_split.py -> get_train_test() function splits the data into training and test sets
  - k_nearest_neighbors.py -> k_nearest_neighbors() trains a KNN model using training data
  - generate_accuracy_plot.py -> accuracy_plot() plots the prediction accuracy ay each classification level
